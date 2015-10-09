@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KaM-BP-O30">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLACK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7y-iV-xCf">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="172" y="216" width="57" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USE SWIPE TO CHANGE COLOR LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP9-ZV-dnh">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="42" y="173" width="317" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrT-uK-OTu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Go to page 2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="294" y="83" width="90" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="hqa-TC-ztA" kind="push" id="4vd-SW-dn3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="j7y-iV-xCf"/>
+                                <exclude reference="sP9-ZV-dnh"/>
+                                <exclude reference="wrT-uK-OTu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="j7y-iV-xCf"/>
+                                <include reference="sP9-ZV-dnh"/>
+                                <include reference="wrT-uK-OTu"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="koQ-8D-xZw" appends="YES" id="wVn-Ik-tNM"/>
+                            <outletCollection property="gestureRecognizers" destination="Jdq-kc-43P" appends="YES" id="vli-82-Vg1"/>
+                            <outletCollection property="gestureRecognizers" destination="pLu-86-sru" appends="YES" id="Zud-8j-uTl"/>
+                            <outletCollection property="gestureRecognizers" destination="5iL-Jx-eQN" appends="YES" id="SGE-aS-cl7"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="obf-9h-MIf"/>
+                    <connections>
+                        <outlet property="labelColor" destination="j7y-iV-xCf" id="OuF-Xc-SgI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="koQ-8D-xZw">
+                    <connections>
+                        <action selector="handleSwipe:" destination="vXZ-lx-hvc" id="r1i-Uv-Fir"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Jdq-kc-43P">
+                    <connections>
+                        <action selector="handleSwipe:" destination="vXZ-lx-hvc" id="vqu-Nv-qv2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="pLu-86-sru">
+                    <connections>
+                        <action selector="handleSwipe:" destination="vXZ-lx-hvc" id="zx1-X5-TfN"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="5iL-Jx-eQN">
+                    <connections>
+                        <action selector="handleSwipe:" destination="vXZ-lx-hvc" id="B6p-KA-3wz"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1138.5" y="1048"/>
+        </scene>
+        <!--Anoher View Controller-->
+        <scene sceneID="Oix-An-B3a">
+            <objects>
+                <viewController id="hqa-TC-ztA" customClass="anoherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XCN-XZ-rBQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="itd-rS-AcP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UaU-jp-ngs">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIEW COLORS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWL-GU-IJA">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="142" y="289" width="117" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USE SWIPE TO CHANGE COLOR VIEW" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmS-xh-0Cp">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="47" y="237" width="306" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="oWL-GU-IJA"/>
+                                <exclude reference="hmS-xh-0Cp"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="oWL-GU-IJA"/>
+                                <include reference="hmS-xh-0Cp"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hBG-cB-tay" appends="YES" id="isk-ti-spG"/>
+                            <outletCollection property="gestureRecognizers" destination="Kxd-MD-amp" appends="YES" id="h8r-6a-mTA"/>
+                            <outletCollection property="gestureRecognizers" destination="AaV-H5-Jqq" appends="YES" id="gGo-cl-cDJ"/>
+                            <outletCollection property="gestureRecognizers" destination="3Q3-cE-9Ez" appends="YES" id="dIq-4F-hTx"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="HXW-lD-zgr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pad-tr-6Ms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="hBG-cB-tay">
+                    <connections>
+                        <action selector="handleSwipe:" destination="hqa-TC-ztA" id="xRF-ad-Dbo"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Kxd-MD-amp">
+                    <connections>
+                        <action selector="handleSwipe:" destination="hqa-TC-ztA" id="fmI-yu-4KQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="AaV-H5-Jqq">
+                    <connections>
+                        <action selector="handleSwipe:" destination="hqa-TC-ztA" id="nV3-11-SNY"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="3Q3-cE-9Ez">
+                    <connections>
+                        <action selector="handleSwipe:" destination="hqa-TC-ztA" id="xhB-JN-iw3"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1900.5" y="1048"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bpV-7r-B5O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KaM-BP-O30" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2vQ-HI-kFF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Vi1-8d-iWb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dwi-CH-B3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363" y="1048"/>
+        </scene>
+    </scenes>
+</document>
